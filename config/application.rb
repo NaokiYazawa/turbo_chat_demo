@@ -34,5 +34,13 @@ module Hello
     origins = ENV.fetch("ACTION_CABLE_ALLOWED_REQUEST_ORIGINS") { "http:\/\/localhost*" }.split(",")
     origins.map! { |url| /#{url}/ }
     config.action_cable.allowed_request_origins = origins
+
+    # Customizing Rails Generators
+    config.generators do |g|
+      g.assets false
+      g.test_framework false
+    end
+
+    config.time_zone = 'Tokyo'
   end
 end

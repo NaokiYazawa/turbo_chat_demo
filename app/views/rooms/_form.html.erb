@@ -1,0 +1,10 @@
+<div class='flex flex-wrap justify-center'>
+  <%= form_with(model: room, class: "w-10/12 xl:w-8/12") do |f| %>
+    <%= render "devise/shared/error_messages", resource: room %>
+    <div class="mb-6">
+      <%= f.label :title, class: "mb-2 block text-sm text-gray-600" %>
+      <%= f.text_field :title, class: "w-full rounded-md border border-gray-300 py-2 px-3 placeholder:text-gray-300 focus:border-indigo-300 focus:outline-none focus:ring focus:ring-indigo-100" %>
+    </div>
+    <%= f.submit class: "inline-flex w-full items-center justify-center rounded-md bg-indigo-500 p-3 text-white duration-100 ease-in-out hover:bg-indigo-600 focus:outline-none cursor-pointer" %>
+  <% end %>
+</div>

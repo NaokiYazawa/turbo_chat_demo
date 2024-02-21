@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+  resources :rooms do
+    resources :messages
+  end
   root to: "pages#home"
+  devise_for :users
 
   get "/up/", to: "up#index", as: :up
   get "/up/databases", to: "up#databases", as: :up_databases
@@ -20,6 +24,7 @@ Rails.application.routes.draw do
   # authenticate :user, lambda { |u| u.admin? } do
   #   mount Sidekiq::Web => "/sidekiq"
   # end
+  mount ActionCable.server => '/cable'
 
   # Learn more about this file at: https://guides.rubyonrails.org/routing.html
 end
