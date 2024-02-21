@@ -7,6 +7,45 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Changed
+
+- Add `config/initializers/enable_yjit.rb` which enables YJIT by default (delete this file to disable it)
+- Add `required: false` to `depends_on` in `docker-compose.yml` (requires Docker Compose v2.20.2+)
+- Update Node and Yarn install strategy to remove install script deprecation warning
+- A whole bunch of changes related to Rails 7.1.0, take a look at [this commit](https://github.com/nickjj/docker-rails-example/commit/94e9190e2e3db2cd350cd217db3b270b7c77fb72)
+
+#### Languages and services
+
+- Update `Ruby` to `3.3.0`
+- Update `Node` to `20.X`
+- Update `Postgres` to `16.1`
+- Update `Redis` to `7.2.3`
+
+#### Back-end dependencies
+
+- Update `cssbundling-rails` to `1.4.0`
+- Update `jsbundling-rails` to `1.3.0`
+- Update `puma` to `6.4.2`
+- Update `rack-mini-profiler` to `3.3.0`
+- Update `minitest` to `5.22.1`
+- Update `rails` to `7.1.3`
+- Update `redis` to `5.0.8`
+- Update `sidekiq` to `7.2.1`
+- Update `stimulus-rails` to `1.3.3`
+- Update `turbo-rails` to `2.0.0`
+
+#### Front-end dependencies
+
+- Update `@hotwired/stimulus` to `3.2.2`
+- Update `@hotwired/turbo-rails` to `8.0.0`
+- Update `autoprefixer` to `10.4.17`
+- Update `esbuild` to `0.20.0`
+- Update `postcss-import` to `16.0.0`
+- Update `postcss` to `8.4.34`
+- Update `tailwindcss` to `3.4.1`
+
+## [0.8.0] - 2023-05-13
+
 ### Added
 
 - Ability to customize `UID` and `GID` if you're not using `1000:1000` (check the `.env.example` file)
@@ -21,33 +60,34 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 #### Languages and services
 
-- Update `Ruby` to `3.2.1`
+- Update `Ruby` to `3.2.2`
 - Update `Node` to `18.X`
-- Update `Postgres` to `15.2`
-- Update `Redis` to `7.0.8`
+- Update `Postgres` to `15.3`
+- Update `Redis` to `7.0.11`
 
 #### Back-end dependencies
 
 - Update `cssbundling-rails` to `1.1.2`
 - Update `jsbundling-rails` to `1.1.1`
-- Update `minitest` to `5.17.0`
-- Update `pg` to `1.4.5`
-- Update `puma` to `6.1.0`
-- Update `rails` to `7.0.4.2`
+- Update `minitest` to `5.18.0`
+- Update `pg` to `1.5.3`
+- Update `puma` to `6.2.2`
+- Update `rack-mini-profiler` to `3.1.0`
+- Update `rails` to `7.0.4.3`
 - Update `redis` to `5.0.6`
-- Update `sidekiq` to `7.0.5`
+- Update `sidekiq` to `7.1.0`
 - Update `stimulus-rails` to `1.2.1`
-- Update `turbo-rails` to `1.3.3`
+- Update `turbo-rails` to `1.4.0`
 
 #### Front-end dependencies
 
 - Update `@hotwired/stimulus` to `3.2.1`
-- Update `@hotwired/turbo-rails` to `7.25`
-- Update `autoprefixer` to `10.4.13`
-- Update `esbuild` to `0.17.8`
+- Update `@hotwired/turbo-rails` to `7.3.0`
+- Update `autoprefixer` to `10.4.14`
+- Update `esbuild` to `0.17.19`
 - Update `postcss-import` to `15.1.0`
-- Update `postcss` to `8.4.21`
-- Update `tailwindcss` to `3.2.7`
+- Update `postcss` to `8.4.23`
+- Update `tailwindcss` to `3.3.2`
 
 ### Removed
 
@@ -297,7 +337,8 @@ Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Everything!
 
-[Unreleased]: https://github.com/nickjj/docker-rails-example/compare/0.7.0...HEAD
+[Unreleased]: https://github.com/nickjj/docker-rails-example/compare/0.8.0...HEAD
+[0.8.0]: https://github.com/nickjj/docker-rails-example/compare/0.7.0...0.8.0
 [0.7.0]: https://github.com/nickjj/docker-rails-example/compare/0.6.0...0.7.0
 [0.6.0]: https://github.com/nickjj/docker-rails-example/compare/0.5.0...0.6.0
 [0.5.0]: https://github.com/nickjj/docker-rails-example/compare/0.4.0...0.5.0
